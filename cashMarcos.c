@@ -5,7 +5,7 @@
 int main(void)
 {
     float ChangeOwed;
-    int Coins, Quarters, Dimes, Nickles, Pennies;
+    int Coins, Quarters, Dimes, Nickels, Pennies;
 
     do
     {
@@ -23,7 +23,7 @@ int main(void)
     {
         cents = (cents - 10);
     }
-    for (Nickles = 0; cents >= 5; Nickles++)
+    for (Nickels = 0; cents >= 5; Nickels++)
     {
         cents = (cents - 5);
     }
@@ -32,7 +32,7 @@ int main(void)
         cents = (cents - 1);
     }
 
-    Coins = (Quarters + Dimes + Nickles + Pennies);
+    Coins = (Quarters + Dimes + Nickels + Pennies);
 
     printf("%i\n", Coins);
 
