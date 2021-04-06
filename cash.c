@@ -15,24 +15,24 @@ int main (void)
     
     int cents = round(m * 100);
     
-            for (y = 0; cents >= 25; y++)
-            {
-                cents = (cents - 25);
-            }
-                for (w = 0; cents >= 10; w++)
-                {
-                    cents = (cents - 10); 
-                }
-                
-                    for (x = 0; cents >= 5; x++)
-                    {
-                        cents = (cents - 5);
-                    }
-                        for (z = 0; cents >= 1; z++)
-                        {
-                            cents = (cents - 1);
-                        }
+    for (y = 0; cents >= 25; y++)
+    {
+        cents = (cents - 25);
+    }
+    for (w = 0; cents >= 10; w++)
+    {
+        cents = (cents - 10); 
+    }
         
+    for (x = 0; cents >= 5; x++)
+    {
+        cents = (cents - 5);
+    }
+    for (z = 0; cents >= 1; z++)
+    {
+        cents = (cents - 1);
+    }
+
     n = (x + y + z + w);   
     
     printf("%i\n", n);
