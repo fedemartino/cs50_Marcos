@@ -28,10 +28,7 @@ int main (void)
     {
         cents = (cents - 5);
     }
-    for (z = 0; cents >= 1; z++)
-    {
-        cents = (cents - 1);
-    }
+    z = (cents - 1);
 
     n = (x + y + z + w);   
     
