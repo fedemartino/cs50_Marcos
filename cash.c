@@ -5,7 +5,7 @@
 int main (void)
 {
     float m;
-    int n, y, w, x, z;
+    int totalCoins, quarters, dimes, nickels, pennies;
     
     do
     {
@@ -15,23 +15,23 @@ int main (void)
     
     int cents = round(m * 100);
     
-    for (y = 0; cents >= 25; y++)
+    for (quarters = 0; cents >= 25; quarters++)
     {
         cents = (cents - 25);
     }
-    for (w = 0; cents >= 10; w++)
+    for (dimes = 0; cents >= 10; dimes++)
     {
         cents = (cents - 10); 
     }
         
-    for (x = 0; cents >= 5; x++)
+    for (nickels = 0; cents >= 5; nickels++)
     {
         cents = (cents - 5);
     }
-    z = (cents - 1);
+    pennies = (cents - 1);
 
-    n = (x + y + z + w);   
+    totalCoins = quarters + dimes + nickels + pennies;   
     
-    printf("%i\n", n);
+    printf("%i\n", totalCoins);
    
 }
