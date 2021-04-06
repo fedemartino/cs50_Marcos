@@ -12,7 +12,7 @@ int main (void)
         m = get_float ("Change owed: ");
     }
     while (m < 0);
-    
+    //esta variable representa el cambio total en centavos como numero entero
     int cents = round(m * 100);
     
     for (quarters = 0; cents >= 25; quarters++)
