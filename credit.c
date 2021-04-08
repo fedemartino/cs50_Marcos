@@ -30,11 +30,11 @@ int main(void)
         {
             if (digitoPar == 4)
             {
-               condicionA = 1;
+                condicionA = 1;
             }
             else if (digitoPar == 5)
             {
-              condicionA = 2;
+                condicionA = 2;
             }
         }
         else if (i == 10000000000000 && (digitoPar == 7 || digitoPar == 4))
@@ -50,16 +50,16 @@ int main(void)
         sumaImpar = sumaImpar + digitoImpar;
 
         if (h == 100000000000000)
-         {
-             if (digitoImpar == 3)
-             {
-                 condicionA = 3;
-             }
-             if (digitoImpar >= 1 && digitoImpar <= 5)
-             {
-                 condicionB = 2;
-             }
-         }
+        {
+            if (digitoImpar == 3)
+            {
+                condicionA = 3;
+            }
+            if (digitoImpar >= 1 && digitoImpar <= 5)
+            {
+                condicionB = 2;
+            }
+        }
         if (h == 1000000000000 && digitoImpar == 4)
         {
             condicionA = 1;
@@ -71,28 +71,27 @@ int main(void)
 
     checkSum = sumaPar + sumaImpar;
 
-   if (checkSum % 10 == 0)
-   {
-       if (condicionA == 1)
-       {
+    if (checkSum % 10 == 0)
+    {
+        if (condicionA == 1)
+        {
             printf("VISA\n");
-       }
-       else if (condicionA == 2 && condicionB == 2)
-       {
-           printf("Master Card\n");
-       }
-       else if (condicionA == 3 && condicionC == 3)
-       {
-           printf("American Express\n");
-       }
-       else
-       {
-           printf("INVALID\n");
-       }
+        }
+        else if (condicionA == 2 && condicionB == 2)
+        {
+            printf("Master Card\n");
+        }
+        else if (condicionA == 3 && condicionC == 3)
+        {
+            printf("American Express\n");
+        }
+        else
+        {
+            printf("INVALID\n");
+        }
     }
-   else
-   {
-       printf("INVALID\n");
-   }
-
+    else
+    {
+        printf("INVALID\n");
+    }
 }
