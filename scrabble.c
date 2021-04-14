@@ -7,7 +7,6 @@
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
 string abc = "abcdefghijklmnopqrstuvwxyz";
-string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 int compute_score(string word);
 
@@ -45,28 +44,17 @@ int compute_score(string word)
     int letters = strlen(abc);
 
     int score = 0;
-
+    string WORD = word;
 
     for (int i = 0; i <= (word_len - 1); i++)
     {
-        if (islower(word[i]))
+        WORD[i] = tolower(word[i]);
+        
+        for (int j = 0; j <= (letters - 1); j++)
         {
-            for (int j = 0; j <= (letters - 1); j++)
+            if (WORD[i] == abc[j])
             {
-                if (word[i] == abc[j])
-                {
-                    score += POINTS[j];
-                }
-            }
-        }
-        else
-        {
-            for (int j = 0; j <= (letters - 1); j++)
-            {
-                if (word[i] == ABC[j])
-                {
-                    score += POINTS[j];
-                }
+                score += POINTS[j];
             }
         }
     }
